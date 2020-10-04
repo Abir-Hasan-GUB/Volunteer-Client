@@ -1,0 +1,21 @@
+.activityDetails{
+height: 219px;
+background: #FFFFFF;
+box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+border-radius: 10px;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+.activityText{
+    padding: 20px;
+    margin-top: 50px;
+}
+.activityImg{
+    padding: 10px;
+}
+.activityImg img{
+width: 140px;
+margin-top: 11px;
+height: auto;
+border-radius: 15px;
+}

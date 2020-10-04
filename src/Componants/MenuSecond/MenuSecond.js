@@ -1,9 +1,9 @@
 import React from 'react';
-import { Button, Navbar, Nav} from 'react-bootstrap';
-import './Menu.css';
+import { Navbar, Nav} from 'react-bootstrap';
 import logo from '../Images/logos/Logo.png';
+import './MenuSecond.css';
 
-const Menu = () => {
+const MenuSecond = () => {
     return (
         <Navbar className="container menubar" expand="lg">
   <Navbar.Brand href="#home">
@@ -16,12 +16,11 @@ const Menu = () => {
       <Nav.Link href="#link">Donation</Nav.Link>
       <Nav.Link href="#home">Event</Nav.Link>
       <Nav.Link href="#link">Blog</Nav.Link>
-      <Button className="menu-btn" variant="primary">Admin</Button>
-      <Button className="menu-btn" variant="dark">Register</Button>
+     <p className = "activeUser">Active User Name</p>
     </Nav>
   </Navbar.Collapse>
 </Navbar>
     );
 };
 
-export default Menu;
+export default MenuSecond;
