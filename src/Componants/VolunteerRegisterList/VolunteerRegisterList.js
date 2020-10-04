@@ -16,7 +16,7 @@ const VolunteerRegisterList = () => {
             <div className="row">
             <div className="col-md-3 volunteerLeft">
                 <div className="Secondlogo divCenter">
-                <img className ="registerLogo" src={logo} alt="logo"/>
+                <Link to="/"><img className ="registerLogo" src={logo} alt="logo"/></Link>
                 <div className="registerLink">
     <Link className = "link" to="/VolunteerRegisterList"><h4><span className="userIcon">{userIcon}</span> Volunteer register list</h4></Link>
     <Link className = "link" to="/addEvent"><h5><span>{plusIcon}</span> Add event</h5></Link>

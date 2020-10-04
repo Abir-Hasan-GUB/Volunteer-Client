@@ -8,57 +8,54 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import Menu from './Componants/Menu/Menu';
 import NotFound from './Componants/NotFound/NotFound';
 import Register from './Componants/Register/Register';
 import RegisterDetails from './Componants/RegisterDetails/RegisterDetails';
 import VolunteerRegisterList from './Componants/VolunteerRegisterList/VolunteerRegisterList';
 import AddEvent from './Componants/AddEvent/AddEvent';
+import PrivateRoute from './Componants/PrivateRoute/PrivateRoute';
 export const UserContext = createContext();
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
   return (
-    // <Menu></Menu>
-    //     <Home></Home>
-    //     <Login></Login>
-    //     <Register></Register>
-    //     <RegisterDetails></RegisterDetails>
-    //     <Admin></Admin>
-    //     <AddEvent></AddEvent>
-
+  
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
     <p>Name: {loggedInUser.name}</p>
     <Router>
-        {/* <Menu/> */}
         <Switch>
           <Route path="/home">
             <Home />
           </Route>
+
           <Route path="/login">
             <Login />
           </Route>
-          <Route path="/register">
-            <Register />
-          </Route>
-          <Route path="/registerDetails">
-            <RegisterDetails />
-          </Route>
-          <Route path="/VolunteerRegisterList">
+          
+          <PrivateRoute path="/registerDetails">
+            <RegisterDetails name= {loggedInUser.name}/>
+          </PrivateRoute>
+
+          <PrivateRoute path="/VolunteerRegisterList">
             <VolunteerRegisterList/>
-          </Route>
-          <Route path="/addEvent">
+          </PrivateRoute>
+
+          <PrivateRoute path="/addEvent">
             <AddEvent></AddEvent>
-          </Route>
-          {/* <PrivateRoute path="/book/:bedType">
-            <Book />
-          </PrivateRoute> */}
+          </PrivateRoute>
+
+          <PrivateRoute path="/register">
+          <Register name={loggedInUser.name} email={loggedInUser.email} />
+          </PrivateRoute>
+          
           <Route exact path="/">
             <Home />
           </Route>
+
           <Route path="*">
             <NotFound></NotFound>
           </Route>
+
         </Switch>
     </Router>
   </UserContext.Provider>
