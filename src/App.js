@@ -1,25 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import AddEvent from './Componants/AddEventByAdmin/AddEvent';
+import Admin from './Componants/Admin/Admin';
+import Home from './Componants/Home/Home';
+import Login from './Componants/Login/Login';
+import Menu from './Componants/Menu/Menu';
+import Register from './Componants/Register/Register';
+import RegisterDetails from './Componants/RegisterDetails/RegisterDetails';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <div>
+        <Menu></Menu>
+        <Home></Home>
+        <Login></Login>
+        <Register></Register>
+        <RegisterDetails></RegisterDetails>
+        <Admin></Admin>
+        <AddEvent></AddEvent>
+   </div>
   );
 }
 
