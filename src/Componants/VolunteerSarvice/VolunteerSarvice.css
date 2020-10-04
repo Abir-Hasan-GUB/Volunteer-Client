@@ -1,0 +1,9 @@
+.sarvices .card-footer {
+    background: #FFBD3E;
+}
+.sarvices{
+    display: flex;
+}
+.sarvice-card{
+    margin-top: 35px;
+}

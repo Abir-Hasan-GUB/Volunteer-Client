@@ -2,12 +2,13 @@ import React from 'react';
 import { Button, Navbar, Nav} from 'react-bootstrap';
 import './Menu.css';
 import logo from '../Images/logos/Logo.png';
+import { Link } from 'react-router-dom';
 
 const Menu = () => {
     return (
         <Navbar className="container menubar" expand="lg">
   <Navbar.Brand href="#home">
-      <img className="logo" src={logo} alt="logo"/>
+            <img className="logo" src={logo} alt="logo"/>
   </Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">

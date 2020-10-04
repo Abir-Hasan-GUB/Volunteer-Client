@@ -1,24 +1,52 @@
-import React from 'react';
+import React, { createContext, useState } from 'react';
 import './App.css';
-import AddEvent from './Componants/AddEventByAdmin/AddEvent';
-import Admin from './Componants/Admin/Admin';
 import Home from './Componants/Home/Home';
 import Login from './Componants/Login/Login';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 import Menu from './Componants/Menu/Menu';
-import Register from './Componants/Register/Register';
-import RegisterDetails from './Componants/RegisterDetails/RegisterDetails';
+import NotFound from './Componants/NotFound/NotFound';
+export const UserContext = createContext();
 
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({});
   return (
-   <div>
-        <Menu></Menu>
-        <Home></Home>
-        <Login></Login>
-        <Register></Register>
-        <RegisterDetails></RegisterDetails>
-        <Admin></Admin>
-        <AddEvent></AddEvent>
-   </div>
+    // <Menu></Menu>
+    //     <Home></Home>
+    //     <Login></Login>
+    //     <Register></Register>
+    //     <RegisterDetails></RegisterDetails>
+    //     <Admin></Admin>
+    //     <AddEvent></AddEvent>
+
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+    <p>Name: {loggedInUser.name}</p>
+    <Router>
+        {/* <Menu/> */}
+        <Switch>
+          <Route path="/home">
+            <Home />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          {/* <PrivateRoute path="/book/:bedType">
+            <Book />
+          </PrivateRoute> */}
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="*">
+            <NotFound></NotFound>
+          </Route>
+        </Switch>
+    </Router>
+  </UserContext.Provider>
+
   );
 }
 
