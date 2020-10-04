@@ -1,0 +1,28 @@
+.register-panel{
+    width: 570px;
+    height: 591px;
+    margin: 130px auto 0;
+    background: #FFFFFF;
+    border: 1px solid #ABABAB;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 50px;
+    }
+    .register-panel input{
+        display: block;
+        width: 462px;
+        padding: 25px 0;
+        margin-top: 25px;
+height: 32px;
+border: none;
+border-bottom: 1px solid gray;
+    }
+    .registrationBtn{
+       
+padding: 14px 0px 0px 181px;
+
+width: 462px;
+height: 48px;
+background: #3F90FC;
+margin-top: 50px;
+    }

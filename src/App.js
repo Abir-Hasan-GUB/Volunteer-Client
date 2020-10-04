@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import Menu from './Componants/Menu/Menu';
 import NotFound from './Componants/NotFound/NotFound';
+import Register from './Componants/Register/Register';
 export const UserContext = createContext();
 
 function App() {
@@ -33,6 +34,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/register">
+            <Register />
           </Route>
           {/* <PrivateRoute path="/book/:bedType">
             <Book />
