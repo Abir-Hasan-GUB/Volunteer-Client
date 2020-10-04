@@ -1,15 +1,35 @@
 .activityDetails{
 height: 219px;
 background: #FFFFFF;
-box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
 border-radius: 10px;
 margin-top: 20px;
+margin-left: 7% !important;
 margin-bottom: 20px;
 }
 .activityText{
-    padding: 20px;
-    margin-top: 50px;
+    padding: 20px !important;
+    margin-top: 50px !important;
+    position: relative;
+
 }
+.activityText h3{
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 33px;
+text-align: center;
+color: #0B0B0B;
+}
+.activityText P{
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 26px;
+text-align: center;
+color: #000000;
+
+    }
 .activityImg{
     padding: 10px;
 }
@@ -18,4 +38,14 @@ width: 140px;
 margin-top: 11px;
 height: auto;
 border-radius: 15px;
+}
+.cancelBtn{
+    position: absolute;
+    right: 0;
+align-items: flex-start;
+padding: 13px 0px 0px 41px;
+position: absolute;
+width: 100px;
+height: 38px;
+border-radius: 5px;
 }

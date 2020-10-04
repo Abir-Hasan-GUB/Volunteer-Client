@@ -6,18 +6,18 @@ import logo from '../Images/logos/Logo.png';
 const Menu = () => {
     return (
         <Navbar className="container menubar" expand="lg">
-  <Navbar.Brand href="#home">
+  <Navbar.Brand href="/">
             <img className="logo" src={logo} alt="logo"/>
   </Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="ml-auto">
-      <Nav.Link href="#home">Home</Nav.Link>
+      <Nav.Link href="/">Home</Nav.Link>
       <Nav.Link href="#link">Donation</Nav.Link>
       <Nav.Link href="#home">Event</Nav.Link>
       <Nav.Link href="#link">Blog</Nav.Link>
-      <Button className="menu-btn" variant="primary">Admin</Button>
-      <Button className="menu-btn" variant="dark">Register</Button>
+      <Button href="/addEvent" className="menu-btn" variant="primary">Admin</Button>
+      <Button href="/register" className="menu-btn" variant="dark">Register</Button>
     </Nav>
   </Navbar.Collapse>
 </Navbar>

@@ -1,0 +1,19 @@
+.userListInClmn .row span{
+height: 19px;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 19px;
+color: #000000;
+}
+.ListRow{
+    margin: 10px 0;
+}
+.TrashIcon{
+    cursor: pointer;
+    font-size: 18px !important;
+    border-radius: 2px;
+    color: #fff !important;
+    background: red;
+    text-align: center;
+}

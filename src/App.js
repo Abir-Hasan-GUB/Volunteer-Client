@@ -12,6 +12,8 @@ import Menu from './Componants/Menu/Menu';
 import NotFound from './Componants/NotFound/NotFound';
 import Register from './Componants/Register/Register';
 import RegisterDetails from './Componants/RegisterDetails/RegisterDetails';
+import VolunteerRegisterList from './Componants/VolunteerRegisterList/VolunteerRegisterList';
+import AddEvent from './Componants/AddEvent/AddEvent';
 export const UserContext = createContext();
 
 function App() {
@@ -41,6 +43,12 @@ function App() {
           </Route>
           <Route path="/registerDetails">
             <RegisterDetails />
+          </Route>
+          <Route path="/VolunteerRegisterList">
+            <VolunteerRegisterList/>
+          </Route>
+          <Route path="/addEvent">
+            <AddEvent></AddEvent>
           </Route>
           {/* <PrivateRoute path="/book/:bedType">
             <Book />
