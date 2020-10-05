@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
 import './VolunteerSarvice.css';
-import pic from '../Images/mixedImage/babySit.png';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../App';
 
@@ -16,12 +15,12 @@ const VoulunteerSarvice = () => {
     },[])
 
     return (
-        <div className="sarvices container row">
+        <div className="sarvices container">
             <Link to="/register">
             {
                 allSarviceList.map(sarvices =>
-                <div className="sarvice-card col-md-3">
-                <Card style={{ width: '15rem' }}>
+                <div className="sarvice-card">
+                <Card className="sarviceMiniCard">
                     <Card.Img variant="top" src={sarvices.img} />
                     <Card.Footer>
             <strong className="text-muted">{sarvices.sarviceName}</strong>

@@ -29,6 +29,12 @@ color: #232323;
 }
 .submitBtn{
     position: absolute;
-    bottom: -15px;
-    right: 15px;
+    bottom: -15px !important;
+    right: 15px !important;
+}
+.formCustom{
+    width: 100%;
+}
+.fromLeft{
+    float: left;
 }

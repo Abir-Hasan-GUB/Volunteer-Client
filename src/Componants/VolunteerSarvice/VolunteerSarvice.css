@@ -1,9 +1,22 @@
 .sarvices .card-footer {
     background: #FFBD3E;
+    text-align: center;
+    color: #fff;
 }
 .sarvices{
     display: flex;
 }
 .sarvice-card{
     margin-top: 35px;
+    width: 30%;
+    height: 250px;
+    margin-bottom: 40px;
+    margin-left: 3%;
+    float: left;
+    box-sizing: border-box;
+}
+.sarviceMiniCard img{
+    height: 250px;
+    width: 100%;
+    box-sizing: border-box;
 }
