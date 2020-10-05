@@ -5,7 +5,9 @@ box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
 border-radius: 10px;
 margin-top: 20px;
 margin-left: 7% !important;
+float: left;
 margin-bottom: 20px;
+width: 45%;
 }
 .activityText{
     padding: 20px !important;

@@ -59,7 +59,7 @@ const VolunteerRegisterList = () => {
                         </div>
                         <div className="allList">
                             {
-                                allUser.map((data) => <ActivityUserList name={data.name} email={data.email} date = {data.date}></ActivityUserList>)
+                                allUser.map((data) => <ActivityUserList name={data.name} email={data.email} date = {data.date} description = {data.description}></ActivityUserList>)
                             }
                         </div>
                     </div>

@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom';
 import { UserContext } from '../../App';
 
 const Register = (props) => {
-   console.log(props);
+   
 const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-
     const handleRegistration = () => {
+        
         const date = document.getElementById('date').value;
         const description = document.getElementById('description').value;
         const libraryName = document.getElementById('libraryName').value;
@@ -21,9 +21,7 @@ const [loggedInUser, setLoggedInUser] = useContext(UserContext);
             body: JSON.stringify(newRegistration)
         })
         .then(response => response.json())
-        .then(data =>{
-            console.log(data);
-        })
+        .then(data =>{})
 
     }
 

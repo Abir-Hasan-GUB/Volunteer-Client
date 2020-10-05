@@ -1,11 +1,12 @@
 import React from 'react';
 import './UserActivity.css';
 import { Button } from 'react-bootstrap';
+import extraVolunteersImg from '../Images/mixedImage/extraVolunteer.png';
 
 const UserActivity = (props) => {
 
 const deleteButton = (id) => {
-    fetch(`/delete/${id}`, {
+    fetch(`http://localhost:5000/delete/${id}`, {
         method: 'DELETE'
     })
     .then(response => response.json())
@@ -15,10 +16,10 @@ const deleteButton = (id) => {
 }
     console.log(props)
     return (
-        <div className="container row">
+        <div className="container ">
             <div className="col-md-5 activityDetails row">
                 <div className="col-md-4 activityImg">
-                    <img src={props.img} alt="" />
+                    <img src={extraVolunteersImg} alt="" />
                 </div>
                 <div className="col-md-8 activityText">
                     <h3>{props.name}</h3>
