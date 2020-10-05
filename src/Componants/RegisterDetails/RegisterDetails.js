@@ -17,7 +17,6 @@ const RegisterDetails = (props) => {
     return (
         <div className="container">
             <MenuSecond name= {props.name}></MenuSecond>
-    <h1>Booking Length: {allRegisteredData.length}</h1>
             {
                 allRegisteredData.map((data) =><UserActivity name = {data.name} date = {data.date} id = {data._id}></UserActivity>)
             }
