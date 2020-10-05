@@ -11,10 +11,11 @@ const deleteButton = (id) => {
     })
     .then(response => response.json())
     .then(result => {
-        console.log("Deleted Successfully !")
+        // if(result){
+          
+        //  }
     })
 }
-    console.log(props)
     return (
         <div className="container ">
             <div className="col-md-5 activityDetails row">
