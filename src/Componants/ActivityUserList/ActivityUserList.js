@@ -5,19 +5,20 @@ import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 
 const actionIconTrash = <FontAwesomeIcon icon={faTrashAlt} />
 
-const ActivityUserList = () => {
+const ActivityUserList = (props) => {
+    // console.log(props)
     return (
         <div className="container userListInClmn">
            <div className="ListRow">
            <div className="row">
                 <div className="col-md-3">
-                    <span>Abir Hasan</span>
+                    <span>{props.name}</span>
                 </div>
                 <div className="col-md-3">
-                    <span>abir.green.cse@gail.com</span>
+                    <span>{props.email}</span>
                 </div>
                 <div className="col-md-2">
-                    <span>10/12/2018</span>
+                    <span>{props.date}</span>
                 </div>
                 <div className="col-md-3">
                     <span>Man Is Mortal</span>

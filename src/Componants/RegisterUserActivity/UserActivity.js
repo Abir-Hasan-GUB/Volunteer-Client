@@ -3,6 +3,16 @@ import './UserActivity.css';
 import { Button } from 'react-bootstrap';
 
 const UserActivity = (props) => {
+
+const deleteButton = (id) => {
+    fetch(`/delete/${id}`, {
+        method: 'DELETE'
+    })
+    .then(response => response.json())
+    .then(result => {
+        console.log("Deleted Successfully !")
+    })
+}
     console.log(props)
     return (
         <div className="container row">
@@ -13,7 +23,7 @@ const UserActivity = (props) => {
                 <div className="col-md-8 activityText">
                     <h3>{props.name}</h3>
                     <p>{props.date}</p>
-                    <Button variant="secondary" className="cancelBtn">Cancel</Button>
+                    <Button onClick = {()=>deleteButton(props.id)} variant="secondary" className="cancelBtn">Cancel</Button>
                 </div>
             </div>
         </div>

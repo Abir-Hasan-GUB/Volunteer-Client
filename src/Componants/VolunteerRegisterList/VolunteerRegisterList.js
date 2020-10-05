@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './VolunteerRegisterList.css';
 import logo from '../Images/logos/Logo.png';
 import ActivityUserList from '../ActivityUserList/ActivityUserList';
@@ -6,11 +6,22 @@ import ActivityUserList from '../ActivityUserList/ActivityUserList';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserFriends,faPlus } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../App';
 
 const userIcon = <FontAwesomeIcon icon={faUserFriends} />
 const plusIcon = <FontAwesomeIcon icon={faPlus} />
 
+
 const VolunteerRegisterList = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const [allUser,setUser] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/registerUser?email='+loggedInUser.email)
+        .then(response => response.json())
+        .then(data => setUser(data))
+    },[])
+
     return (
         <div className="container volunteerFullDiv">
             <div className="row">
@@ -47,7 +58,9 @@ const VolunteerRegisterList = () => {
                             </div>
                         </div>
                         <div className="allList">
-                            <ActivityUserList></ActivityUserList>
+                            {
+                                allUser.map((data) => <ActivityUserList name={data.name} email={data.email} date = {data.date}></ActivityUserList>)
+                            }
                         </div>
                     </div>
                 </div>
